@@ -28,17 +28,21 @@ public function contactFormApiEndpoint(){
 public function __constract(){
   add_action( 'wp_enqueue_scripts', array($this, 'enqueue_vueCF_scripts'));
  add_action('rest_api_init',array( $this, 'contactFormApiEndpoint'));
+ add_shortcode('vue-wp-form',array( $this, 'addAppElement'));
 
 }
-
+	
+public function addAppElement(){
+echo '<div id="app"></div>';
+}
+	
 public function enqueue_vueCF_scripts() {
  wp_enqueue_script( 'vue-main', get_stylesheet_directory_uri() . '/dist/js/app.js', array(), _S_VERSION, true );
  wp_enqueue_script( 'vue-chunk', get_stylesheet_directory_uri() . '/dist/js/chunk-vendors.js', array(), _S_VERSION, true );
     wp_localize_script( 'vue-main', 'vue_main_object',
         array(
-		   'siteurl' => esc_url_raw( rest_url()),
-           'ajaxurl' => admin_url( 'admin-ajax.php' ),
-	        'nonce' => wp_create_nonce( 'vue-nonce'),
+          'siteurl' => esc_url_raw( rest_url()),
+	  'nonce' => wp_create_nonce( 'vue-nonce'),
        )
    );
 add_action( 'wp_ajax_send_contact_form', 'send_contact_form' );
