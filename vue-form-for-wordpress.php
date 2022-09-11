@@ -77,3 +77,6 @@ return  false;
 }
   
 }
+if(!class_exists('vueFormForWP')){
+new vueFormForWP();	
+}
