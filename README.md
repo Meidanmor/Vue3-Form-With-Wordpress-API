@@ -13,7 +13,7 @@ return  false;
 3. Open App.vue inside src folder and change the url value from 'vue_main_object.siteurl'+"send-contact-form/v1/contact/" to "https://domain-name.com/wp-json/send-contact-form/v1/contact/" (and don't forget to change domain-name.com to your domain name..).
 
 **Before Production You need to do this steps:**
-1. after you build your project, go to app.js and remove the '' in 'vue_main_object.siteurl' and 'vue_main_object.nonce' in order to covert it from a string to a variable by wordpress.
+1. after you build your project, go to app.js and remove the ' ' in 'vue_main_object.siteurl' and 'vue_main_object.nonce' in order to covert it from a string to a variable.
 
 2. 
 ## Project setup
