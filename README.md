@@ -1,5 +1,6 @@
 # vue-form-for-wordpress
 **NOTE!
+
 **Before Development You need to do this steps:
 1. go to vue-form-for-wordpress.php, find "send_contact_form" function and add /* */ for the first if statement in order to cancel the nonce verification (you should use it on production in wordpress for security purpose):
 ```
