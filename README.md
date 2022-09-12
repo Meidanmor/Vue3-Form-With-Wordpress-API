@@ -1,6 +1,6 @@
 # vue-form-for-wordpress
-# NOTE!
-**Before Development You need to do this steps:**
+# Instructions
+# Before Development
 1. go to vue-form-for-wordpress.php, find "send_contact_form" function and add /* */ for the first if statement in order to cancel the nonce verification (you should use it on production in wordpress for security purpose):
 ```
 /* if ( ! wp_verify_nonce( $request['nonce'], 'vue-nonce' ) ) {
@@ -12,7 +12,7 @@ return  false;
 
 3. Open App.vue inside src folder and change the url value from 'vue_main_object.siteurl'+"send-contact-form/v1/contact/" to "https://domain-name.com/wp-json/send-contact-form/v1/contact/" (and don't forget to change domain-name.com to your domain name..).
 
-**Before Production You need to do this steps:**
+# Before Production
 1. after you build your project, go to app.js and remove the ' ' in 'vue_main_object.siteurl' and 'vue_main_object.nonce' in order to covert it from a string to a variable.
 
 ## Project setup
