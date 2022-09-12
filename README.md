@@ -15,7 +15,6 @@ return  false;
 **Before Production You need to do this steps:**
 1. after you build your project, go to app.js and remove the ' ' in 'vue_main_object.siteurl' and 'vue_main_object.nonce' in order to covert it from a string to a variable.
 
-2. 
 ## Project setup
 ```
 npm install
